@@ -79,7 +79,7 @@
 //     echo "F";
 // }
 //////////////////////
-$degree = 80;
+$degree = 42;
 switch($degree){
     case $degree > 85:
     echo "A";
