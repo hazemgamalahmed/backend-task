@@ -1,7 +1,4 @@
 <?php
-echo "<p> welcome it is now";
-echo date('H:i, jS F Y');
-echo "</p>";
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	// $username = $_POST['username'];
 	// $email = $_POST['email'];
@@ -22,20 +19,16 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 	$error = [];
 
 	if(!empty($_POST['submit']) && empty($_POST['website'])){
+	$website = $_POST['website'];
 		$error[] = "please choose any feild from check box";
 	}else{
-		if(!empty($_POST['submit']) && count($error) === 0){
-			$website = $_POST['website'];
-			$files = $_FILES['my_work'];
-			$files_temp = $_FILES['my_work']['tmp_name'];
-			foreach($website as $web){
-				echo $web . "<br>";
-			}
-			echo "<br>" . "your file name is " .$files['name'];
-
-			move_uploaded_file($files_temp, __DIR__ . '/up/' .$files['name'] );
+		foreach($website as $web){
+			echo $web . "<br>";
 		}
-}
+	}
+	$files = $_FILES['my_work'];
+	echo $files['name'];
+
 }else{
 
 }
@@ -44,10 +37,6 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 <html>
 <head>
 	<title>welcome to our forms</title>
-	<style type="text/css">
-
-
-	</style>
 </head>
 <body>
 	<form method="POST" action="<?php echo $_SERVER['PHP_SELF'];?>" enctype="multipart/form-data">
@@ -80,7 +69,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         <label>your url</label>
         <input type="url" name="link"><br>
         <label>your file please</label>
-        <input type="file" name="my_work" required=""><br>
+        <input type="file" name="my_work" value=""><br>
         <label>search</label>
         <input type="search" name="search">
         <input type="reset">
@@ -88,8 +77,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
 	</form>
 		<?php
-		
-	if(!empty($error)){
+		if(count($error) > 0){
 			foreach ($error as $err) {
 				echo $err . "<br />";
 			}

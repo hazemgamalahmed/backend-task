@@ -79,24 +79,26 @@
 //     echo "F";
 // }
 //////////////////////
-$degree = 42;
-switch($degree){
-    case $degree > 85:
-    echo "A";
-break;
-    case $degree > 75:
-        echo 'B';
-    break;
-    case $degree > 65:
-        echo "C";
-    break;
-    case $degree >= 50; 
-    echo "D";
-    break;
+// $degree = 42;
+// switch($degree){
+//     case $degree > 85:
+//     echo "A";
+// break;
+//     case $degree > 75:
+//         echo 'B';
+//     break;
+//     case $degree > 65:
+//         echo "C";
+//     break;
+//     case $degree >= 50; 
+//     echo "D";
+//     break;
 
-    default:
-    echo "F";
+//     default:
+//     echo "F";
 
-}
+// }
+
+$students = [];
 
 ?>
