@@ -1,20 +1,28 @@
 <?php
 $data = new SortData;
 // $data->welcome("hazem");
-$nums = [11, -2, 4, 35, 0, 8, -9];
+$nums = [-2, 9, 11, 3, 6, 2];
 $data->setNums($nums);
 $data->getNums();
-$data->sortArr();
+// $data->getNums();
+// if($data->setNums($nums)){
 
-echo "<br>" . "------------------------------------------------" . "<br>";
+// $data->sortArr();
+// }else{
+// 	echo "Error";
+// }
+// echo "<br>" . "------------------------------------------------" . "<br>";
 
-$calc = new Calc(12, 6);
-echo $calc->add();
-echo "<br>";
-echo $calc->subtract();
-echo "<br>";
-echo $calc->multi();
-echo "<br>";
-echo $calc->devided();
-echo "<br>";
+// $calc = new Calc(12, 6);
+// // print_r($calc);
+// echo $calc->add();
+// echo "<br>";
+// echo $calc->subtract();
+// echo "<br>";
+// echo $calc->multi();
+// echo "<br>";
+// echo $calc->devided();
+// echo "<br>";
+// echo phpinfo();
+
 ?>

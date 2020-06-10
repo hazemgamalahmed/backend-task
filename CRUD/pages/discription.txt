@@ -1,0 +1,3 @@
+index.php?powe=admin it will go to the admin page
+
+index.php?power=home  or index.php it is will go to add any record

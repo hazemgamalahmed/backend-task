@@ -1,7 +1,6 @@
 <?php
-
-require_once 'app/model/SortCounr.class.php';
-require_once 'app/model/Calc.class.php';
+include 'public/tmblate/header.php';
+require_once "init.php";
 if(empty($_GET['p'])){
 	$page = 'home';
 }else{
@@ -17,4 +16,7 @@ switch ($page) {
 	default:
 	    require_once 'pages/404.view.php';
 }
+
+include 'public/tmblate/footer.php';
+
 ?>
